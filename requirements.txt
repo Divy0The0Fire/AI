@@ -1,0 +1,7 @@
+groq
+cohere
+rich
+python-dotenv
+google-generativeai
+crewai[tools]
+crewai
