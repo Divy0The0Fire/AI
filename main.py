@@ -1,6 +1,13 @@
+from plugins.transcript import transcriptAudio
 
-# >>> please genrate video and upload to my youtube channel
 
-# >>> True|False <<<
-# -> 10 min
-# -> ...
+
+print(
+    transcriptAudio(
+        "https://github.com/AssemblyAI-Examples/audio-examples/raw/main/20230607_me_canadian_wildfires.mp3",
+        is_url=True
+        )
+    )
+
+# speed
+# flexible
