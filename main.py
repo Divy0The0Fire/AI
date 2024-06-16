@@ -1,13 +1,7 @@
-from plugins.transcript import transcriptAudio
+from plugins.rawdog import RawDog, Prompts
+from llm.ChatGpt import LLM
 
+llm = LLM(verbose=True, messages=Prompts())
 
-
-print(
-    transcriptAudio(
-        "https://github.com/AssemblyAI-Examples/audio-examples/raw/main/20230607_me_canadian_wildfires.mp3",
-        is_url=True
-        )
-    )
-
-# speed
-# flexible
+while 1:
+    RawDog(input(">>> "), llm).run(keepHistory=True)

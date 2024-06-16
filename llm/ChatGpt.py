@@ -55,7 +55,7 @@ class LLM:
         self.system_prompt = system_prompt
         self.max_tokens = max_tokens
         self.verbose = verbose
-
+        "" if not system_prompt else self.add_message(self.SYSTEM, system_prompt)
     def run(self, prompt: str|None = None) -> str:
         """
         Runs the LLM with the given prompt.
@@ -78,7 +78,6 @@ class LLM:
         """
 
         "" if not prompt else self.add_message("user", prompt)
-
         url = "https://proxy.tune.app/chat/completions"
         headers = {
             "Authorization": self.api_key,
@@ -244,3 +243,8 @@ def FileToBase64(file_path:str):
     return encoded_image
 
 
+if __name__ == "__main__":
+    llm = LLM(verbose=True)
+    llm.add_message("user", "Hello, how are you?")
+    llm.add_message("assistant", "I'm doing well, thank you!")
+    llm.run("Hello, how are you?")

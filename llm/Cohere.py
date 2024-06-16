@@ -56,6 +56,7 @@ class LLM:
         self.max_tokens = max_tokens
         self.connectors = connectors
         self.verbose = verbose
+        self.add_message(self.SYSTEM, self.system_prompt)
 
     def run(self, prompt: str) -> str:
         """
