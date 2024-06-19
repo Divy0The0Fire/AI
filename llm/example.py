@@ -14,6 +14,7 @@ class LLM:
             verbose: bool = False,
             api_key:str|None = None
             ) -> None:
+        self.messages = []
         """
         Initialize the LLM
 

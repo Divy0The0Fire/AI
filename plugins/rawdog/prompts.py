@@ -4,8 +4,9 @@ from pathlib import Path
 import datetime
 import platform
 from functools import cache
+from dotenv import get_key
 
-PROMPTS_DIR = r"C:\\Users\\Divyansh\\Desktop\\YT\\Ai\\plugins\\rawdog\\prompts\\"
+PROMPTS_DIR = fr"{os.path.join(os.getcwd(), 'plugins', 'rawdog', 'prompts')}"
 
 
 def listdir():
