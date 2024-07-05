@@ -82,7 +82,6 @@ class LLM:
         headers = {
             "Authorization": self.api_key,
             "Content-Type": "application/json",
-            "X-Org-Id": "b7e11655-fa97-4f1c-8cde-d9eca2b9814b",
         }
         data = {
         "temperature": self.temperature,
